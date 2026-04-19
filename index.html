@@ -1,160 +1,657 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- fullPage.js CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css">
-
-<!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-<!-- Your site CSS -->
-<link rel="stylesheet" href="styles/style.css">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dhruv Verma | Portfolio</title>
-  <meta name="description" content="Portfolio of Dhruv Verma — analytics, Power BI, Microsoft Fabric, and automation." />
 
-  <!-- IMPORTANT for GitHub Pages project site -->
-  <base href="/PortFolio/">
+  <!-- Plugin CSS (REQUIRED for proper look) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Your site CSS (YOU MUST ADD styles/style.css in repo) -->
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
 <body>
-  <header class="header">
-    <a class="brand" href="#home">Dhruv<span>.</span></a>
 
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
-      <span class="menu-icon"></span>
-    </button>
+  <!-- OPTIONAL: if you use a preloader in scripts, keep this -->
+  <!-- <div class="spinner-wrapper"></div> -->
 
-    <nav class="nav" data-nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div id="all-content">
+    <div class="bg-box"></div>
 
-  <main>
-    <!-- HERO -->
-    <section id="home" class="section hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">HEY! I AM</p>
-          <h1 class="title">Dhruv Verma</h1>
-          <p class="subtitle">
-            I’m a <span class="highlight" id="role">Product Analyst</span>
-          </p>
+    <header>
+      <a class="navbrand" href="#home">
+        <span class="navbrand-icon">D</span>hruv
+      </a>
 
-          <div class="cta-row">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn" href="assets/resume/Dhruv_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" />
+        <div id="hamburger" class="hamburger">
+          <div id="hamburger-lines"></div>
+        </div>
+
+        <div class="menu">
+          <div id="menusub1">
+            <div id="menusub2">
+              <ul id="menu-links">
+                <li><a href="#home" id="home-link" data-text="Home">Home</a></li>
+                <li><a href="#about" id="about-link" data-text="About">About</a></li>
+                <li><a href="#skills" id="skills-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" id="projects-link" data-text="Projects">Projects</a></li>
+                <li><a href="#contact" id="contact-link" data-text="Contact">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="hero-card">
-          <img class="avatar" src="assets/images/image_dhruv.png" alt="Profile image" />
-          <div class="hero-card-text">
-            <p><strong>Focus:</strong> Power BI, Microsoft Fabric, Automation</p>
-            <p><strong>Location:</strong> Gurugram, India</p>
+      </div>
+    </header>
+
+    <!-- FULLPAGE wrapper (RESTORES old scroll snap animation) -->
+    <div id="fullpage">
+
+      <!-- HOME -->
+      <section class="vertical-scrolling homepage" data-anchor="home">
+        <div class="home">
+          <div class="home-left">
+            <div class="typeit-content">
+              <span class="typeit-subtitle">HEY! I AM</span>
+              <h2 class="typeit-title">Dhruv Verma</h2>
+              <h1>I'm a <span id="typeit-quote"></span></h1>
+            </div>
+          </div>
+
+          <div class="home-right">
+            <div class="title1">
+              <h1>Hello<span>&#46;</span></h1>
+            </div>
+            <div class="title2">
+              <h1>I am</h1>
+            </div>
+            <div class="title3">
+              <h1>Dhruv</h1>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="lead">
-          Product Analyst focused on analytics platforms, stakeholder enablement, and automation.
-          I build dashboards, streamline operations, and improve adoption through clear processes and tooling.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="chips">
-          <span class="chip">Microsoft Fabric</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">Power Automate</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Excel</span>
-          <span class="chip">ServiceNow</span>
-          <span class="chip">Azure DevOps</span>
-          <span class="chip">Reporting & Ops</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="grid">
-          <article class="card">
-            <h3>Zomato Food Delivery Dataset</h3>
-            <p>Insights in food delivery dynamics using EDA & modeling.</p>
-            <div class="card-actions">
-              <a class="link" href="#" aria-disabled="true">Details (add link)</a>
+      <!-- ABOUT -->
+      <section class="vertical-scrolling" data-anchor="about">
+        <div id="aboutPage" class="about">
+          <div class="about-left">
+            <div class="about-head">
+              <div class="about-headline">
+                <h1 id="about-headline">About Me</h1>
+              </div>
+              <div class="lines">
+                <span class="top-line"></span>
+                <span class="bottom-line"></span>
+              </div>
             </div>
-          </article>
 
-          <article class="card">
-            <h3>Loan Dataset Analysis</h3>
-            <p>Risk insights using data cleaning, preprocessing and analysis.</p>
-            <div class="card-actions">
-              <a class="link" href="#" aria-disabled="true">Details (add link)</a>
+            <div class="about-content">
+              <div class="about-info">
+                <p>
+                  Final-year BCA student at Guru Gobind Singh Indraprastha University, passionate
+                  about technology. Eager learner, seeking growth opportunities. Aspiring to
+                  specialize in Data Science.
+                </p>
+              </div>
+
+              <div class="about-links">
+                <span>
+                  <a href="https://www.linkedin.com/in/dhruv-verma24/" target="_blank" rel="noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </span>
+
+                <div class="about-btns">
+                  <a href="assets/resume/Dhruv_Resume.pdf" target="_blank" id="resume-link" rel="noreferrer">
+                    <i class="fas fa-download"></i>
+                    Resume
+                  </a>
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <article class="card">
-            <h3>Self Harm Analysis (Tableau)</h3>
-            <p>Interactive visualization to surface trends and insights.</p>
-            <div class="card-actions">
-              <a class="link" href="#" aria-disabled="true">Details (add link)</a>
+          <div class="about-right">
+            <div class="about-image">
+              <img src="assets/images/image_dhruv.png" alt="Profile image" />
             </div>
-          </article>
+
+            <div class="about-tabs">
+              <div class="tab-container">
+                <div class="each-tab">
+                  <div class="tab-logo">
+                    <div class="hexagon"><i class="fas fa-flag"></i></div>
+                  </div>
+                  <div class="tab-text">
+                    <div class="about-label">Data-Driven</div>
+                    <div class="about-label-details">Making decisions based on thorough data analysis</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-container">
+                <div class="each-tab">
+                  <div class="tab-logo">
+                    <div class="hexagon"><i class="fas fa-lightbulb" style="font-size:34px"></i></div>
+                  </div>
+                  <div class="tab-text">
+                    <div class="about-label">Analytical Mind</div>
+                    <div class="about-label-details">Breaking down complex problems methodically</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-container">
+                <div class="each-tab">
+                  <div class="tab-logo">
+                    <div class="hexagon"><i class="fas fa-user"></i></div>
+                  </div>
+                  <div class="tab-text">
+                    <div class="about-label">Team Player</div>
+                    <div class="about-label-details">Collaborating effectively towards shared goals</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-container">
+                <div class="each-tab">
+                  <div class="tab-logo">
+                    <div class="hexagon"><i class="fas fa-wrench"></i></div>
+                  </div>
+                  <div class="tab-text">
+                    <div class="about-label">Operations Management</div>
+                    <div class="about-label-details">Optimizing processes for efficiency and productivity</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="lead">
-          Open to opportunities and collaborations. Reach out anytime.
-        </p>
+      <!-- SKILLS -->
+      <section class="vertical-scrolling" data-anchor="skills">
+        <div id="skillsPage" class="skills">
 
-        <div class="contact-box">
-          <a class="btn primary" href="mailto:dhruvxverma@gmail.com">Email: dhruvxverma@gmail.com</a>
-          <a class="btn" href="https://www.linkedin.com/in/dhruv-verma24/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/xDhruv" target="_blank" rel="noopener">GitHub</a>
+          <div class="skills-up">
+            <div class="skills-carousel owl-carousel owl-theme">
+              <div class="item">
+                <div class="skills-up-section">
+                  <div class="up-grid-layout">
+
+                    <div class="grid-item">
+                      <div class="skill-logo">
+                        <img src="assets/images/icons/icons8-power-bi-50.png" alt="skill" />
+                      </div>
+                      <div class="skill-title">POWER BI</div>
+                    </div>
+
+                    <div class="grid-item">
+                      <div class="skill-logo">
+                        <img src="assets/images/icons/icons8-tableau-software.png" alt="skill" />
+                      </div>
+                      <div class="skill-title">TABLEAU</div>
+                    </div>
+
+                    <div class="grid-item">
+                      <div class="skill-logo">
+                        <img src="assets/images/icons/icons8-excel-50.png" alt="skill" />
+                      </div>
+                      <div class="skill-title">EXCEL</div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="skills-up-section">
+                  <div class="up-grid-layout">
+                    <div class="grid-item">
+                      <div class="skill-logo"><i class="fab fa-html5"></i></div>
+                      <div class="skill-title">HTML5</div>
+                    </div>
+
+                    <div class="grid-item">
+                      <div class="skill-logo"><i class="fab fa-css3-alt"></i></div>
+                      <div class="skill-title">CSS3</div>
+                    </div>
+
+                    <div class="grid-item">
+                      <div class="skill-logo">
+                        <img src="assets/images/icons/icons8-python.png" alt="skill" />
+                      </div>
+                      <div class="skill-title">PYTHON</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="skills-left">
+            <div class="skills-head">
+              <div class="skills-headline">
+                <h1 id="skills-headline">Skills</h1>
+              </div>
+              <div class="lines">
+                <span class="top-line"></span>
+                <span class="bottom-line"></span>
+              </div>
+            </div>
+
+            <div class="skills-content">
+              <div class="skills-info">
+                <p>
+                  An individual eager to learn and explore new fields of life and technology, with
+                  good listening skills and fast learning abilities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-right">
+            <div class="skills-section">
+              <div class="grid-layout">
+                <div class="grid-item">
+                  <div class="skill-logo"><i class="fab fa-html5"></i></div>
+                  <div class="skill-title">HTML5</div>
+                </div>
+                <div class="grid-item">
+                  <div class="skill-logo"><i class="fab fa-css3-alt"></i></div>
+                  <div class="skill-title">CSS3</div>
+                </div>
+                <div class="grid-item">
+                  <div class="skill-logo">
+                    <img src="assets/images/icons/icons8-power-bi-50.png" alt="skill" />
+                  </div>
+                  <div class="skill-title">POWER BI</div>
+                </div>
+                <div class="grid-item">
+                  <div class="skill-logo">
+                    <img src="assets/images/icons/icons8-tableau-software.png" alt="skill" />
+                  </div>
+                  <div class="skill-title">TABLEAU</div>
+                </div>
+                <div class="grid-item">
+                  <div class="skill-logo">
+                    <img src="assets/images/icons/icons8-python.png" alt="skill" />
+                  </div>
+                  <div class="skill-title">PYTHON</div>
+                </div>
+                <div class="grid-item">
+                  <div class="skill-logo">
+                    <img src="assets/images/icons/icons8-excel-50.png" alt="skill" />
+                  </div>
+                  <div class="skill-title">EXCEL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </section>
 
-        <p class="note">
-          (Tip: mailto forms are unreliable on browsers. If you want a real form, we can add Formspree/Netlify.)
-        </p>
-      </div>
-    </section>
-  </main>
+      <!-- PROJECTS -->
+      <section class="vertical-scrolling unique-sec" data-anchor="projects">
+        <div class="horizontal-scrolling">
+          <div id="projectsPage" class="projects-page">
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Dhruv Verma</p>
+            <div class="projects-left">
+              <div class="projects-head">
+                <div class="projects-headline">
+                  <h1 id="projects-headline">My Projects</h1>
+                </div>
+                <div class="lines">
+                  <span class="top-line"></span>
+                  <span class="bottom-line"></span>
+                </div>
+              </div>
+
+              <div class="projects-content">
+                <div class="projects-info">
+                  <p>
+                    <span>Check out my portfolio projects by pressing on the button below.</span>
+                    <span>
+                      They can be found on my
+                      <a class="github-link" href="https://github.com/xDhruv" target="_blank" rel="noreferrer">GitHub</a>!
+                    </span>
+                  </p>
+                </div>
+
+                <div class="projects-btns">
+                  <a href="#projects/1" id="resume-link">Show me more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projects-right">
+              <div class="projects-area">
+                <div class="projects-layout">
+
+                  <div class="projects-item">
+                    <div class="project-content">
+                      <div class="project-card"></div>
+                      <div class="project-card2"></div>
+                      <div class="project-text">
+                        <div class="project-name" style="font-size:21px">Zomato Food Delivery Dataset</div>
+                        <span>Insights in Food Delivery Dynamics</span>
+                      </div>
+                      <button id="modalBtn1" class="project-button">LEARN MORE</button>
+                    </div>
+                  </div>
+
+                  <div class="projects-item">
+                    <div class="project-content">
+                      <div class="project-card"></div>
+                      <div class="project-card2"></div>
+                      <div class="project-text">
+                        <div class="project-name">Loan Dataset</div>
+                        <span>Identifying Financial Risks through Data Analysis</span>
+                      </div>
+                      <button id="modalBtn2" class="project-button">LEARN MORE</button>
+                    </div>
+                  </div>
+
+                  <div class="projects-item">
+                    <div class="project-content">
+                      <div class="project-card"></div>
+                      <div class="project-card2"></div>
+                      <div class="project-text">
+                        <div class="project-name">Self Harm Analysis</div>
+                        <span>Data Visualization</span>
+                      </div>
+                      <button id="modalBtn3" class="project-button">LEARN MORE</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- MODAL 1 -->
+            <div id="my-modal1" class="modal">
+              <div class="modal-content">
+                <div class="modal-upper">
+                  <div class="image-section">
+                    <div class="projects-carousel owl-carousel owl-theme">
+                      <div class="item"><img src="assets/images/zomato/zomato1.png" alt="" /></div>
+                      <div class="item"><img src="assets/images/zomato/zomato2.png" alt="" /></div>
+                      <div class="item"><img src="assets/images/zomato/zomato3.png" alt="" /></div>
+                      <div class="item"><img src="assets/images/zomato/zomato4.png" alt="" /></div>
+                      <div class="item"><img src="assets/images/zomato/zomato5.png" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-body">
+                  <div class="modal-header">
+                    <div class="modal-heading-num">01</div>
+                    <div class="modal-heading">Zomato Food Delivery Dataset</div>
+                  </div>
+
+                  <div class="modal-details">
+                    <div class="stack-section">Insights in Food Delivery Dynamics</div>
+                    <hr class="divider" />
+                    <div class="details-section">
+                      Exploring the Zomato food delivery dataset provided an opportunity to apply
+                      exploratory data analysis and statistical techniques in a real-world scenario.
+                    </div>
+
+                    <div class="foot">
+                      <div class="modal-close-button">
+                        <span id="close1" class="closing">&times;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- MODAL 2 -->
+            <div id="my-modal2" class="modal">
+              <div class="modal-content">
+                <div class="modal-upper">
+                  <div class="image-section">
+                    <div class="projects-carousel owl-carousel owl-theme">
+                      <div class="item"><img src="assets/images/Loan.png" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-body">
+                  <div class="modal-header">
+                    <div class="modal-heading-num">02</div>
+                    <div class="modal-heading" style="left:33%">Loan Dataset</div>
+                  </div>
+
+                  <div class="modal-details">
+                    <div class="stack-section">Identifying Financial Risks through Data Analysis</div>
+                    <hr class="divider" />
+                    <div class="details-section">
+                      In this project, we undertook a detailed analysis of a loan dataset with the
+                      primary objective of identifying risky loan applications to mitigate financial risks.
+                    </div>
+
+                    <div class="foot">
+                      <div class="modal-close-button">
+                        <span id="close2" class="closing">&times;</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- MODAL 3 -->
+            <div id="my-modal3" class="modal">
+              <div class="modal-content">
+                <div class="modal-upper">
+                  <div class="image-section">
+                    <div class="projects-carousel owl-carousel owl-theme">
+                      <div class="item"><img src="assets/images/Suicide.jpeg" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-body">
+                  <div class="modal-header">
+                    <div class="modal-heading-num">03</div>
+                    <div class="modal-heading" style="left:33%">Self Harm Analysis</div>
+                  </div>
+
+                  <div class="modal-details">
+                    <div class="stack-section">Fostering Awareness through Data Visualization</div>
+                    <hr class="divider" />
+                    <div class="details-section">
+                      Creating an interactive dashboard analyzing India's suicide data was aimed at
+                      fostering awareness and understanding through data visualization.
+                    </div>
+
+                    <div class="foot">
+                      <div class="modal-close-button">
+                        <span id="close3" class="closing">&times;</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="vertical-scrolling" data-anchor="contact">
+        <div id="contactPage" class="contact">
+          <div class="contact-left">
+            <div class="contact-head">
+              <div class="contact-headline">
+                <h1 id="contact-headline">Contact Me</h1>
+              </div>
+              <div class="lines">
+                <span class="top-line"></span>
+                <span class="bottom-line"></span>
+              </div>
+            </div>
+
+            <div class="contact-content">
+              <div class="contact-info">
+                <p class="contact-brief">
+                  Open to new opportunities and eager to contribute. Contact me to discuss potential
+                  collaborations!
+                </p>
+
+                <div class="contact-tab visible">
+                  <a href="mailto:dhruvxverma@gmail.com" class="contact-panel">
+                    <i class="fas fa-envelope contact-icon"></i> dhruvxverma@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <div class="contact-form-area">
+              <div class="contact-title">
+                <span>Have a question or want to work together?</span>
+              </div>
+
+              <div class="contact-form">
+                <div id="error_message"></div>
+
+                <form name="complaint-form" action="mailto:dhruvxverma@gmail.com" method="POST" id="myform"
+                  onsubmit="return validate();">
+
+                  <div class="input_field">
+                    <input id="name" name="Name" type="text" placeholder="Name" autocomplete="off" required />
+                  </div>
+
+                  <div class="input_field">
+                    <input id="subject" name="_subject" type="text" placeholder="Subject" autocomplete="off" required />
+                  </div>
+
+                  <div class="input_field">
+                    <input id="email" name="_replyto" type="text" placeholder="Email" autocomplete="off" required />
+                  </div>
+
+                  <div class="input_field">
+                    <textarea id="message" name="Message" placeholder="Message..." rows="4" autocomplete="off"
+                      required></textarea>
+                  </div>
+
+                  <div class="submit-btn">
+                    <input type="submit" value="Submit" />
+                  </div>
+
+                  <input type="text" name="_gotcha" style="display:none" />
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <p id="scrollDown" class="scrollDown">
+      <span>SCROLLDOWN</span>
+    </p>
+
+  </div>
+
+  <!-- Scripts (ORDER MATTERS) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+  <!-- Owl Carousel (must exist in scripts/ OR use CDN instead) -->
+  <script src="scripts/owl.carousel.js"></script>
+
+  <!-- Your scripts -->
+  <script src="scripts/script.js"></script>
+  <script src="scripts/modals.js"></script>
+  <script src="scripts/scrollEffects.js"></script>
+
+  <!-- Restore Typed animation -->
+  <script>
+    // Typed.js
+    if (typeof Typed !== "undefined") {
+      new Typed('#typeit-quote', {
+        strings: ['Data Analyst', 'Tech Enthusiast', 'Operations Analyst'],
+        typeSpeed: 50,
+        smartBackspace: true,
+        backSpeed: 35,
+        backDelay: 1000,
+        cursorChar: '&#x25AE;',
+        loop: true
+      });
+    }
+
+    // fullPage.js
+    if (window.jQuery && typeof jQuery.fn.fullpage !== "undefined") {
+      jQuery('#fullpage').fullpage({
+        anchors: ['home', 'about', 'skills', 'projects', 'contact'],
+        navigation: false,
+        scrollingSpeed: 700,
+        css3: true,
+        fitToSection: true
+      });
+    }
+
+    // Owl Carousel
+    jQuery(function () {
+      if (typeof jQuery.fn.owlCarousel !== "undefined") {
+        jQuery('.projects-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          items: 1,
+          dots: false,
+          smartSpeed: 300,
+          navText: [
+            "<i class='fas fa-chevron-left'></i>",
+            "<i class='fas fa-chevron-right'></i>"
+          ]
+        });
+
+        jQuery('.skills-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          items: 1,
+          nav: false,
+          dots: true,
+          smartSpeed: 300
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
