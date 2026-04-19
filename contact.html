@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Dhruv Verma</title>
+
+  <base href="/PortFolio/">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="page-body">
+  <div id="all-content">
+    <div class="bg-box"></div>
+
+    <header>
+      <a class="navbrand" href="index.html">
+        <span class="navbrand-icon">D</span>hruv
+      </a>
+
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" aria-label="Open menu" />
+        <div class="hamburger" aria-hidden="true">
+          <div id="hamburger-lines"></div>
+        </div>
+
+        <div class="menu">
+          <div id="menusub1"><div id="menusub2">
+            <ul id="menu-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="assets/resume/Dhruv_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
+            </ul>
+          </div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-container">
+      <h1 class="page-title">Contact</h1>
+
+      <section class="card-block">
+        <p class="muted">Open to new opportunities and collaborations.</p>
+
+        <a class="contact-panel" href="mailto:dhruvxverma@gmail.com">
+          <i class="fas fa-envelope"></i> dhruvxverma@gmail.com
+        </a>
+
+        <a class="contact-panel" href="https://www.linkedin.com/in/dhruv-verma24/" target="_blank" rel="noreferrer">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll("#menu-links a").forEach(a => {
+      a.addEventListener("click", () => {
+        const t = document.querySelector(".toggler");
+        if (t) t.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
