@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhruv Verma | Portfolio</title>
+  <title>Dhruv Verma | PortFolio</title>
 
-  <!-- Plugin CSS (required for fullPage + carousels to look correct) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <!-- ✅ IMPORTANT: GitHub Pages project site base -->
+  <base href="/PortFolio/">
 
-  <!-- ✅ Your Site CSS (FIXED PATH) -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Plugin CSS (required for layout + animations to look correct) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- ✅ Your CSS (you said it is in styles folder) -->
+  <link rel="stylesheet" href="styles/style.css">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Tiny safety patch so SCROLLDOWN stays clickable even if overlays exist -->
+  <style>
+    #scrollDown { z-index: 2001 !important; cursor: pointer; pointer-events: auto; }
+    .toggler { z-index: 3000; }
+    .menu { z-index: 3001; }
+  </style>
 </head>
 
 <body>
@@ -29,7 +39,7 @@
       <div class="menu-wrap">
         <input type="checkbox" class="toggler" />
         <div id="hamburger" class="hamburger">
-          <div id="hamburger-lines"></div>
+          </div>
         </div>
 
         <div class="menu">
