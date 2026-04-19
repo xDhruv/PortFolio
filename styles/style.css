@@ -388,3 +388,50 @@ section.vertical-scrolling{
   .home-right h1{ font-size: 44px; }
   .typeit-title{ font-size: 40px; }
 }
+/* ===== Multi-page support (NEW) ===== */
+body.page-body {
+  overflow: auto !important;
+}
+
+.page-container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.page-title{
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.card-block{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 14px;
+}
+
+.muted{ color: var(--muted); line-height: 1.6; }
+
+.chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
+.chip{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+}
+
+.primary-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(110,168,254,.35);
+  background: rgba(110,168,254,.14);
+}
+``
