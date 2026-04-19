@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Dhruv Verma</title>
+
+  <base href="/PortFolio/">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="page-body">
+  <div id="all-content">
+    <div class="bg-box"></div>
+
+    <header>
+      <a class="navbrand" href="index.html">
+        <span class="navbrand-icon">D</span>hruv
+      </a>
+
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" aria-label="Open menu" />
+        <div class="hamburger" aria-hidden="true">
+          <div id="hamburger-lines"></div>
+        </div>
+
+        <div class="menu">
+          <div id="menusub1"><div id="menusub2">
+            <ul id="menu-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="assets/resume/Dhruv_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></li>
+            </ul>
+          </div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-container">
+      <h1 class="page-title">Skills</h1>
+
+      <section class="card-block">
+        <h2>Core</h2>
+        <div class="chips">
+          <span class="chip">Microsoft Fabric</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Power Automate</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Excel</span>
+          <span class="chip">ServiceNow</span>
+          <span class="chip">Azure DevOps</span>
+        </div>
+      </section>
+
+      <section class="card-block">
+        <h2>Tools & Tech</h2>
+        <div class="chips">
+          <span class="chip">Tableau</span>
+          <span class="chip">Python</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll("#menu-links a").forEach(a => {
+      a.addEventListener("click", () => {
+        const t = document.querySelector(".toggler");
+        if (t) t.checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
